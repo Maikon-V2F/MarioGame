@@ -25,7 +25,7 @@ const loop = setInterval(() => {
         mario.style.bottom = `${marioPosition}px`
 
         mario.src = './assets/death.gif'
-        mario.style.width = '50vh'
+        mario.style.width = '350px'
 
         sound.play()
 

@@ -37,7 +37,7 @@
 }
 
 .jump {
-    animation: jump 800ms ease-out;
+    animation: jump 1s ease-out;
 }
 
 @keyframes jump {
@@ -77,4 +77,16 @@
     to {
         right: 100%;
     }
+}
+
+@media screen and (max-width: 900px) {
+
+    .gameboard{
+        border-bottom: solid green 25px;
+    }
+
+    .clouds {
+        width: 150px;
+    }
+    
 }
