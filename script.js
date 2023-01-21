@@ -16,7 +16,7 @@ const loop = setInterval(() => {
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')
     console.log(marioPosition)
     
-    if (plantPosition <= 300 && marioPosition < 300 && plantPosition > 0 ) {
+    if (plantPosition <= 220 && marioPosition < 150 && plantPosition > 0 ) {
         
         plant.style.animation = 'none'
         plant.style.left = `${plantPosition}px`

@@ -15,7 +15,7 @@
 
 .plant {
     position: absolute;
-    width: 40vh;
+    height: 250px;
     bottom: 0;
     animation: plant 2s infinite linear;
 }
@@ -33,11 +33,11 @@
 .mario {
     position: absolute;
     bottom: 0;
-    width: 50vh;
+    height: 300px;
 }
 
 .jump {
-    animation: jump 1s ease-out;
+    animation: jump 800ms ease-out;
 }
 
 @keyframes jump {
@@ -46,16 +46,16 @@
     }
 
    40% {
-       bottom: 400px;
+       bottom: 300px;
    }
 
    50% {
-    bottom: 400px;
+    bottom: 300px;
 }
 
 
     60% {
-        bottom: 400px;
+        bottom: 300px;
     }
 
     100%{
@@ -66,7 +66,7 @@
 .clouds {
     position: absolute;
     width: 250px;
-    animation: clouds 5s infinite linear;
+    animation: clouds 8s infinite linear;
 }
 
 @keyframes clouds {
