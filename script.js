@@ -15,11 +15,10 @@ const jump = () => {
     setTimeout(() => {
         mario.classList.remove('jump')}
         ,1000)
-    
-        function tocar() {    
-            var son = document.getElementById("jump");       
-            son.play();     
-            }
+
+            var son = document.getElementById("jump")      
+            son.play()    
+
 }
 
 if( width >= 900 ) {
@@ -37,7 +36,7 @@ const loop = setInterval(() => {
     console.log(marioPosition)
     
     if (plantPosition <= 220 && marioPosition < 150 && plantPosition > 0 ) {
-        
+
         document.getElementById('replay').style.visibility = "visible"
         document.getElementById('gameover').style.visibility = "visible"
 
