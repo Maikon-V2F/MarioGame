@@ -143,6 +143,25 @@ p{
  
 }
 
+@media screen and (max-width: 1400px) {
+
+    .gameboard{
+        border-bottom: solid green 75px;
+        background-color: green;
+    }
+
+    p{
+        margin-top: 2%;
+        font-size: 148px;
+    }
+
+    #replay{
+        font-size: 148px;
+        margin-top: 0%;
+    }
+
+}
+
 @media screen and (max-width: 900px) {
 
     .gameboard{
