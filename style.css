@@ -151,6 +151,7 @@ p{
 
     .clouds {
         width: 150px;
+        margin-top: 7%;
     }
 
     #play{
@@ -186,6 +187,82 @@ p{
     p{
         font-size: 124px;
         margin-top: 24%;
+        visibility: hidden;
+        
+     }
+
+
+    @keyframes jump {
+        0%{
+           bottom: 0;
+        }
+    
+       40% {
+           bottom: 150px;
+       }
+    
+       50% {
+        bottom: 150px;
+    }
+    
+    
+        60% {
+            bottom: 150px;
+        }
+    
+        100%{
+            bottom: 0px;
+        }
+    }
+    .jump {
+        animation: jump 800ms ease-out;
+    }
+}
+
+@media screen and (max-width: 415px) {
+
+    .gameboard{
+        border-bottom: solid green 120px;
+    }
+
+    .clouds {
+        width: 150px;
+        margin-top: 20%;
+    }
+
+    #play{
+        width: 70%;
+        height: 100%;
+        font-size: 120px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        position: absolute;
+        margin-left: 10%;
+    }
+    
+    #replay{
+        width: 70%;
+        height: 70%;
+        font-size: 86px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        position: absolute;
+        margin-left: 7%;
+    }
+
+    .mario{
+        height: 150px;
+    }
+
+    .plant{
+        height: 125px;
+    }
+    
+    p{
+        font-size: 96px;
+        margin-top: 85%;
         visibility: hidden;
         
      }
