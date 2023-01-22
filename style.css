@@ -125,6 +125,7 @@ p{
    margin-top: 8%;
    animation: intermittent infinite 1s linear; 
    visibility: hidden;
+   position: absolute;
    
 }
 
@@ -176,7 +177,7 @@ p{
     #play{
         width: 70%;
         height: 70%;
-        font-size: 124px;
+        font-size: 98px;
         background-color: transparent;
         color: white;
         border: none;
@@ -187,7 +188,7 @@ p{
     #replay{
         width: 70%;
         height: 70%;
-        font-size: 124px;
+        font-size: 98px;
         background-color: transparent;
         color: white;
         border: none;
@@ -207,6 +208,8 @@ p{
         font-size: 124px;
         margin-top: 24%;
         visibility: hidden;
+        position: absolute;
+   
         
      }
 
