@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: mariofont;
+    src: url(./assets/SuperMario256.ttf);
+}
+
 .gameboard {
     width: 100%;
     height: 100vh;
@@ -17,8 +22,12 @@
     position: absolute;
     height: 250px;
     bottom: 0;
-    animation: plant 2s infinite linear;
+    right: -300px;
 }
+
+.moveplant {
+    animation: plant 2s infinite linear;
+} 
 
 @keyframes plant {
     from{
@@ -37,7 +46,7 @@
 }
 
 .jump {
-    animation: jump 1s ease-out;
+    animation: jump 800ms ease-out;
 }
 
 @keyframes jump {
@@ -66,17 +75,72 @@
 .clouds {
     position: absolute;
     width: 250px;
-    animation: clouds 8s infinite linear;
+    animation: clouds 16s infinite linear;
 }
 
 @keyframes clouds {
     from{
-        right: -500px;
+        right: -250px;
     }
 
     to {
         right: 100%;
     }
+}
+
+#play{
+    width: 100%;
+    height: 100%;
+    font-size: 196px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    display: inline;
+    animation: intermittent infinite 1s linear;
+    font-family: mariofont;
+}
+
+#replay{
+    width: 100%;
+    height: 100%;
+    font-size: 196px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    display: inline; 
+    visibility: hidden;
+    animation: intermittent infinite 1s linear; 
+    font-family: mariofont;  
+}
+
+p{
+   font-size: 196px;
+   font-family: mariofont;
+   color: red;
+   text-align: center;
+   margin-top: 8%;
+   animation: intermittent infinite 1s linear; 
+   visibility: hidden;
+   
+}
+
+@keyframes intermittent {
+    0%{
+        opacity: 10%;
+    }
+
+    50%{
+        opacity: 100%;
+    }
+    
+    100%{
+        opacity: 10%;
+    }
+ 
 }
 
 @media screen and (max-width: 900px) {
@@ -88,5 +152,68 @@
     .clouds {
         width: 150px;
     }
+
+    #play{
+        width: 70%;
+        height: 70%;
+        font-size: 124px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        position: absolute;
+        margin-left: 15%;
+    }
     
+    #replay{
+        width: 70%;
+        height: 70%;
+        font-size: 124px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        position: absolute;
+        margin-left: 15%;
+    }
+
+    .mario{
+        height: 150px;
+    }
+
+    .plant{
+        height: 125px;
+    }
+    
+    p{
+        font-size: 124px;
+        margin-top: 24%;
+        visibility: hidden;
+        
+     }
+
+
+    @keyframes jump {
+        0%{
+           bottom: 0;
+        }
+    
+       40% {
+           bottom: 150px;
+       }
+    
+       50% {
+        bottom: 150px;
+    }
+    
+    
+        60% {
+            bottom: 150px;
+        }
+    
+        100%{
+            bottom: 0px;
+        }
+    }
+    .jump {
+        animation: jump 800ms ease-out;
+    }
 }
