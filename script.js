@@ -1,15 +1,25 @@
 const mario = document.querySelector('.mario')
 const plant = document.querySelector('.plant')
-const sound = document.querySelector('audio')
+
+const soundjump = document.getElementById('jump')
+const soundover = document.getElementById('over')
+
 
 var width = screen.width;
 
 const jump = () => {
     mario.classList.add('jump')
 
+    soundjump.play()
+
     setTimeout(() => {
         mario.classList.remove('jump')}
         ,1000)
+    
+        function tocar() {    
+            var son = document.getElementById("jump");       
+            son.play();     
+            }
 }
 
 if( width >= 900 ) {
@@ -40,8 +50,8 @@ const loop = setInterval(() => {
         mario.src = './assets/death.gif'
         mario.style.width = '350px'
 
-        sound.play()
-
+        soundover.play()
+    
         clearInterval(loop)
     }
 
@@ -77,7 +87,7 @@ else {
             mario.src = './assets/death.gif'
             mario.style.width = '150px'
     
-            sound.play()
+            soundover.play()
     
             clearInterval(loop)
         }
