@@ -4,6 +4,10 @@ const plant = document.querySelector('.plant')
 const soundjump = document.getElementById('jump')
 const soundover = document.getElementById('over')
 
+function reload(){
+    window.location.reload();
+} 
+
 
 var width = screen.width;
 
@@ -24,6 +28,10 @@ const jump = () => {
 if( width >= 900 ) {
 function play(){
 
+    document.addEventListener('keydown', jump)
+    document.addEventListener('mousedown', jump)
+    document.addEventListener('touchstart', jump)
+
     document.getElementById("play").style.visibility = 'hidden'
 
     plant.classList.add('moveplant')
@@ -37,8 +45,15 @@ const loop = setInterval(() => {
     
     if (plantPosition <= 220 && marioPosition < 150 && plantPosition > 0 ) {
 
+        document.removeEventListener('keydown', jump)
+        document.removeEventListener('mousedown', jump)
+        document.removeEventListener('touchstart', jump)
+
+        document.addEventListener('keydown', reload)
+        document.addEventListener('mousedown', reload)
+        document.addEventListener('touchstart', reload)
+
         document.getElementById('replay').style.visibility = "visible"
-        document.getElementById('gameover').style.visibility = "visible"
 
         plant.style.animation = 'none'
         plant.style.left = `${plantPosition}px`
@@ -60,7 +75,11 @@ const loop = setInterval(() => {
 
 else {
     function play(){
-
+    
+        document.addEventListener('keydown', jump)
+        document.addEventListener('mousedown', jump)
+        document.addEventListener('touchstart', jump)
+    
         document.getElementById("play").style.visibility = 'hidden'
     
         plant.classList.add('moveplant')
@@ -73,9 +92,16 @@ else {
         console.log(marioPosition)
         
         if (plantPosition <= 100 && marioPosition < 75 && plantPosition > 0 ) {
-            
+    
+            document.removeEventListener('keydown', jump)
+            document.removeEventListener('mousedown', jump)
+            document.removeEventListener('touchstart', jump)
+    
+            document.addEventListener('keydown', reload)
+            document.addEventListener('mousedown', reload)
+            document.addEventListener('touchstart', reload)
+    
             document.getElementById('replay').style.visibility = "visible"
-            document.getElementById('gameover').style.visibility = "visible"
     
             plant.style.animation = 'none'
             plant.style.left = `${plantPosition}px`
@@ -87,20 +113,14 @@ else {
             mario.style.width = '150px'
     
             soundover.play()
-    
+        
             clearInterval(loop)
         }
     
     }, 10)
     
-    }
+    }}
 
-}
-
-document.addEventListener('keydown', jump)
-document.addEventListener('mousedown', jump)
-document.addEventListener('touchstart', jump)
-
-function reload(){
-    window.location.reload();
-} 
+        document.addEventListener('keydown', play)
+        document.addEventListener('mousedown', play)
+        document.addEventListener('touchstart', play)

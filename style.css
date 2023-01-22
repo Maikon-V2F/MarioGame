@@ -27,10 +27,10 @@
 
 .moveplant {
     animation: plant 2s infinite linear;
-} 
+}
 
 @keyframes plant {
-    from{
+    from {
         right: -300px;
     }
 
@@ -50,24 +50,24 @@
 }
 
 @keyframes jump {
-    0%{
-       bottom: 0;
+    0% {
+        bottom: 0;
     }
 
-   40% {
-       bottom: 300px;
-   }
+    40% {
+        bottom: 300px;
+    }
 
-   50% {
-    bottom: 300px;
-}
+    50% {
+        bottom: 300px;
+    }
 
 
     60% {
         bottom: 300px;
     }
 
-    100%{
+    100% {
         bottom: 0px;
     }
 }
@@ -79,7 +79,7 @@
 }
 
 @keyframes clouds {
-    from{
+    from {
         right: -250px;
     }
 
@@ -88,84 +88,63 @@
     }
 }
 
-#play{
-    width: 100%;
-    height: 100%;
-    font-size: 196px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    display: inline;
-    animation: intermittent infinite 1s linear;
+#play {
     font-family: mariofont;
-}
-
-#replay{
-    width: 100%;
-    height: 100%;
     font-size: 196px;
-    background-color: transparent;
+    text-align: center;
     color: white;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    display: inline; 
-    visibility: hidden;
-    animation: intermittent infinite 1s linear; 
-    font-family: mariofont;  
+    cursor: default;
+    visibility: visible;
+    animation: intermittent infinite 1s linear;
+    margin-top: 300px;
 }
 
-p{
-   font-size: 196px;
-   font-family: mariofont;
-   color: red;
-   text-align: center;
-   margin-top: 8%;
-   animation: intermittent infinite 1s linear; 
-   visibility: hidden;
-   position: absolute;
-   
+#replay {
+    font-family: mariofont;
+    font-size: 196px;
+    text-align: center;
+    color: white;
+    cursor: default;
+    animation: intermittent infinite 1s linear;
+    visibility: hidden;
+    margin-top: -196px;
 }
 
 @keyframes intermittent {
-    0%{
+    0% {
         opacity: 10%;
     }
 
-    50%{
+    50% {
         opacity: 100%;
     }
-    
-    100%{
+
+    100% {
         opacity: 10%;
     }
- 
+
 }
 
 @media screen and (max-width: 1400px) {
 
-    .gameboard{
+    .gameboard {
         border-bottom: solid green 75px;
-        background-color: green;
     }
 
-    p{
-        margin-top: 2%;
-        font-size: 148px;
+    #play {
+        font-size: 136px;
+        margin-top: 200px;
     }
 
-    #replay{
-        font-size: 148px;
-        margin-top: 0%;
+    #replay {
+        font-size: 136px;
+        margin-top: -120px; 
     }
-
 }
 
 @media screen and (max-width: 900px) {
 
-    .gameboard{
+    .gameboard {
         border-bottom: solid green 25px;
     }
 
@@ -174,76 +153,52 @@ p{
         margin-top: 7%;
     }
 
-    #play{
-        width: 70%;
-        height: 70%;
-        font-size: 98px;
-        background-color: transparent;
-        color: white;
-        border: none;
-        position: absolute;
-        margin-left: 15%;
-    }
-    
-    #replay{
-        width: 70%;
-        height: 70%;
-        font-size: 98px;
-        background-color: transparent;
-        color: white;
-        border: none;
-        position: absolute;
-        margin-left: 15%;
+    #play {
+        font-size: 124px;
+        margin-top: 20px;
     }
 
-    .mario{
+    #replay {
+        top: 170px;
+        margin-top: -260px;
+    }
+
+    .mario {
         height: 150px;
     }
 
-    .plant{
+    .plant {
         height: 125px;
     }
-    
-    p{
-        font-size: 124px;
-        margin-top: 24%;
-        visibility: hidden;
-        position: absolute;
-   
-        
-     }
-
 
     @keyframes jump {
-        0%{
-           bottom: 0;
+        0% {
+            bottom: 0;
         }
-    
-       40% {
-           bottom: 150px;
-       }
-    
-       50% {
-        bottom: 150px;
-    }
-    
-    
+
+        40% {
+            bottom: 150px;
+        }
+
+        50% {
+            bottom: 150px;
+        }
+
+
         60% {
             bottom: 150px;
         }
-    
-        100%{
+
+        100% {
             bottom: 0px;
         }
     }
-    .jump {
-        animation: jump 800ms ease-out;
-    }
+
 }
 
 @media screen and (max-width: 415px) {
 
-    .gameboard{
+    .gameboard {
         border-bottom: solid green 120px;
     }
 
@@ -252,67 +207,24 @@ p{
         margin-top: 20%;
     }
 
-    #play{
-        width: 70%;
-        height: 100%;
+    #play {
         font-size: 120px;
-        background-color: transparent;
-        color: white;
-        border: none;
-        position: absolute;
-        margin-left: 10%;
-    }
-    
-    #replay{
-        width: 70%;
-        height: 70%;
-        font-size: 86px;
-        background-color: transparent;
-        color: white;
-        border: none;
-        position: absolute;
-        margin-left: 7%;
+        margin-top: 170px;
     }
 
-    .mario{
-        height: 150px;
+    #replay {
+        font-size: 100px;
+        margin-top: -290px;
+    }
+}
+
+@media screen and (max-width: 376px){
+    #play {
+        margin-top: 0px;
     }
 
-    .plant{
-        height: 125px;
+    #replay {
+        margin-top: -320px;
     }
-    
-    p{
-        font-size: 96px;
-        margin-top: 85%;
-        visibility: hidden;
-        
-     }
 
-
-    @keyframes jump {
-        0%{
-           bottom: 0;
-        }
-    
-       40% {
-           bottom: 150px;
-       }
-    
-       50% {
-        bottom: 150px;
-    }
-    
-    
-        60% {
-            bottom: 150px;
-        }
-    
-        100%{
-            bottom: 0px;
-        }
-    }
-    .jump {
-        animation: jump 800ms ease-out;
-    }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Mario Game</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="gameboard">
         <img src="./assets/clouds.png" class="clouds">
@@ -14,14 +16,13 @@
         <img src="./assets/mario.gif" class="mario">
         <audio src="./assets/deathSound.mp3" id="over"></audio>
         <audio src="./assets/jump.mp3" id="jump"></audio>
-        <div class="over">
-        <button id="play" onclick="play()" onkeydown="play()" >Tap to play</button>
-        <button onclick="reload()" id="replay">Replay</button>
-        <p id="gameover">Game Over</p>
-        </div>
-        
+
+        <p id="play">Tap to play</p>
+        <p id="replay"> Tap to replay</p>
+
     </div>
-    
-    <script src="./script.js" ></script>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
